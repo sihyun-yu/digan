@@ -1,0 +1,29 @@
+https://s3.amazonaws.com/kinetics/600/val/baking cookies.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/barbequing.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/breading or breadcrumbing.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/cooking egg.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/cooking on campfire.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/cooking sausages (not on barbeque).tar.gz
+https://s3.amazonaws.com/kinetics/600/val/cooking scallops.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/cutting apple.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/cutting nails.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/cutting orange.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/cutting pineapple.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/cutting watermelon.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/flipping pancake.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/chopping vegetables.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/frying vegetables.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/chopping meat.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/grinding meat.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/making a cake.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/eating cake.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/making a sandwich.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/making pizza.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/making sushi.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/making tea.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/peeling apples.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/peeling potatoes.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/picking fruit.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/scrambling eggs.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/separating eggs.tar.gz
+https://s3.amazonaws.com/kinetics/600/val/preparing salad.tar.gz
