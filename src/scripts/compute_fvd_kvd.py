@@ -58,7 +58,7 @@ def main(
     np.random.seed(seed)
     torch.manual_seed(seed)
 
-    #################### Load VideoGPT ########################################
+    #################### Load model ########################################
     print('Loading networks from "%s"...' % network_pkl)
     device = torch.device('cuda')
     with dnnlib.util.open_url(network_pkl) as f:
