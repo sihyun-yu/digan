@@ -1,0 +1,797 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:22px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1300px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+
+	sup {
+	    line-height: 0;
+
+	    /* The following rules (or similar) likely come from browser 
+	     * style and are not needed
+	     */
+	    font-size: 0.83em;
+	    vertical-align: super;
+	}
+
+	p { white-space: pre-wrap; font-size: 16px;}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+
+	table td {
+ 		 font-size: 18px;
+	}	
+
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+	<title>Generating Videos with Dynamics-aware Implicit Generative Adversarial Networks</title>
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:video" content="Path to my video.mp4">
+	<meta property="og:title" content="Generating Videos with Dynamics-aware Implicit Generative Adversarial Networks" />
+	<meta property="og:description" content="We make video generation scalable leveraging implicit neural representations." />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">Generating Videos with Dynamics-aware 
+			<br>
+			 Implicit Generative Adversarial Networks
+		</span>
+		<span style="font-size:24px">
+			<br><br>
+			ICLR 2022
+			<br>
+		</span>
+		<div style="line-height:60%;">
+		    <br>
+		</div>	
+		<table align=center width=980px>
+			<table align=center width=980px>
+				<tr>
+					<td align=center width=140px>
+						<center>
+							<span style="font-size:20px; text-align: center"><a href="https://sihyun-yu.github.io">Sihyun Yu</a><sup>*,1</sup></span>
+						</center>
+					</td>
+					<td align=center width=140px>
+						<center>
+							<span style="font-size:20px; text-align: center"><a href="https://jihoontack.github.io">Jihoon Tack</a><sup>*,1</sup></span>
+						</center>
+					</td>
+					<td align=center width=140px>
+						<center>
+							<span style="font-size:20px; text-align: center"><a href="https://sites.google.com/view/sangwoomo">Sangwoo Mo</a><sup>*,1</sup></span>
+						</center>
+					</td>
+					<td align=center width=140px>
+						<center>
+							<span style="font-size:20px; text-align: center"><a href="https://www.linkedin.com/in/blandocs/">Hyunsu Kim</a><sup>2</sup></span>
+						</center>
+					</td>
+					<td align=center width=140px>
+						<center>
+							<span style="font-size:20px; text-align: center"><a href="https://github.com/taki0112">Junho Kim</a><sup>2</sup></span>
+						</center>
+					</td>
+					<td align=center width=140px>
+						<center>
+							<span style="font-size:20px; text-align: center"><a href="https://aidljwha.wordpress.com">Jung-Woo Ha</a><sup>2</sup></span>
+						</center>
+					</td>
+					<td align=center width=140px>
+						<center>
+							<span style="font-size:20px; text-align: center"><a href="http://alinlab.kaist.ac.kr/shin.html">Jinwoo Shin</a><sup>1</sup></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</table>
+	</center>
+	<div style="line-height:60%;">
+	    <br>
+	</div>	
+	<center>
+		<table align=center width=360px>
+			<tr>
+				<td align=center width=140px>
+					<center>
+						<span style="font-size:20px; text-align: center"><sup>1</sup><img style="vertical-align: bottom" src="resources/kaist-icon.png" width="30px" height="30px"> KAIST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</center>
+				</td>
+				<td align=center width=140px>
+					<center>
+						<span style="font-size:20px; text-align: center"><sup>2</sup><img style="vertical-align: bottom" src="resources/naver-icon.png" width="25px" height="25px"> NAVER AI Lab</span>
+					</center>
+				</td>			
+			</tr>
+		</table>
+	</center>
+	<div style="line-height:60%;">
+	    <br>
+	</div>	
+	<center>
+		<table align=center width=390px>
+			<tr>
+				<td align=center width=100px>
+					<center>
+						<span style="font-size:20px"><a href="https://openreview.net/forum?id=Czsdv-S4-w9">[Paper]</a></span>
+					</center>
+				</td>
+				<td align=center width=100px>
+					<center>
+						<span style="font-size:20px">[Code]</span>
+					</center>
+				</td>			
+				<td align=center width=100px>
+					<center>
+						<span style="font-size:20px">[Slides]</span>
+					</center>
+				</td>			
+			</tr>
+		</table>
+	</center>
+	<br>
+	<center>
+		<table align=center width=850px>
+			<tr>
+				<td align="center">
+				Note: All videos are presented as 8 frame-per-second (FPS), unless otherwise specified.
+				</td>
+			</tr>
+		</table>
+	</center>
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Abstract </h1></center>
+		<tr>
+			<td width=850px>
+				<center>
+					<table width="850" height="24" border="0" cellspacing="1" cellpadding="3">
+					<td>
+					<div style="text-align: justify">
+					In the deep learning era, long video generation of high-quality still remains challenging due to the spatio-temporal complexity and continuity of videos. Existing prior works have attempted to model video distribution by representing videos as 3D grids of RGB values, which impedes the scale of generated videos and neglects continuous dynamics. In this paper, we found that the recent emerging paradigm of implicit neural representations (INRs) that encodes a continuous signal into a parameterized neural network effectively mitigates the issue. By utilizing INRs of video, we propose dynamics-aware implicit generative adversarial network (DIGAN), a novel generative adversarial network for video generation. Specifically, we introduce (a) an INR-based video generator that improves the motion dynamics by manipulating the space and time coordinates differently and (b) a motion discriminator that efficiently identifies the unnatural motions without observing the entire long frame sequences. We demonstrate the superiority of DIGAN under various datasets, along with multiple intriguing properties, e.g., long video synthesis, video extrapolation, and non-autoregressive video generation. For example, DIGAN improves the previous state-of-the-art FVD score on UCF-101 by 30.7% and can be trained on 128 frame videos of 128x128 resolution, 80 frames longer than the 48 frames of the previous state-of-the-art method.
+					</div>
+					</td>
+					</table><br>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<hr>
+
+
+
+	<table align=center width=850px>
+		<center><h1>Main results </h1></center>
+		<tr>
+			<td width=256px>
+				<center>
+					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					Randomly selected examples of generated videos (unconditional) on diverse datasets.
+					</table><br>
+
+					<table width="800">
+						<video width="400" height="400" controls controlsList="nodownload">
+						  <source src="resources/ucf_main.mp4" type="video/mp4">
+						</video>
+						<video width="400" height="400" controls controlsList="nodownload">
+						  <source src="resources/sky_main.mp4" type="video/mp4">
+						</video>
+					</table>
+					<table width="800" height="24" border="0" cellspacing="1" cellpadding="2">
+						<td width="400" valign="middle" halign="middle" align="center">
+							UCF-101
+						</td>
+						<td width="400" valign="middle" halign="middle" align="center">
+							Sky Time-lapse
+						</td>
+					</table>			
+					<br>
+					<table width="800">
+						<video width="400" height="400" controls controlsList="nodownload">
+						  <source src="resources/taichi_main.mp4" type="video/mp4">
+						</video>
+						<video width="400" height="400" controls controlsList="nodownload">
+						  <source src="resources/kinetics_main.mp4" type="video/mp4">
+						</video>
+					</table>
+					<table width="800" height="24" border="0" cellspacing="1" cellpadding="2">
+						<td width="400" valign="middle" halign="middle" align="center">
+							Tai-Chi-HD
+						</td>
+						<td width="400" valign="middle" halign="middle" align="center">
+							Kinetics-food
+						</td>
+					</table>								
+				</center>
+			</td>
+		</tr>
+	</table>
+	<hr>
+
+	<center>
+		<table align=center width=850px>
+			<center><h1> Long video generation</h1></center>
+			<tr>
+				<td width=260px>
+					<center>
+					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+						128 frame videos of 128×128 resolution on Tai-Chi-HD. We set 30 FPS, which is fully identical to the real videos. 
+					</table><br>
+						<table width="480">
+							<video width="240" height="240" controls controlsList="nodownload">
+							  <source src="resources/taichi128_example1_30fps.mp4" type="video/mp4">
+							</video>					
+							<video width="240" height="240" controls controlsList="nodownload">
+							  <source src="resources/taichi128_example2_30fps.mp4" type="video/mp4">
+							</video>
+						</table>
+						<table width="480" height="24" border="0" cellspacing="1" cellpadding="5">
+						<td width="240" valign="middle" halign="middle" align="center">
+							Example 1
+						</td>
+						<td width="240" valign="middle" halign="middle" align="center">
+							Example 2
+						</td>
+					</table><br>
+
+					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+						256 frame videos of 128×128 resolution on Tai-Chi-HD. We set 30 FPS, which is fully identical to the real videos. 
+					</table><br>
+						<table width="480">
+							<video width="240" height="240" controls controlsList="nodownload">
+							  <source src="resources/taichi256_76_42.mp4" type="video/mp4">
+							</video>					
+							<video width="240" height="240" controls controlsList="nodownload">
+							  <source src="resources/taichi256_79_42.mp4" type="video/mp4">
+							</video>
+						</table>
+						<table width="480" height="24" border="0" cellspacing="1" cellpadding="5">
+						<td width="240" valign="middle" halign="middle" align="center">
+							Example 1
+						</td>
+						<td width="240" valign="middle" halign="middle" align="center">
+							Example 2
+						</td>
+					</table><br>
+
+					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+						Randomly selected examples of 256 frame videos of 128×128 resolution on Tai-Chi-HD. 
+					</table><br>
+
+					<table width="800">
+						<video width="400" height="400" controls controlsList="nodownload">
+						  <source src="resources/taichi_256_random.mp4" type="video/mp4">
+						</video>
+					</table><br>
+
+						
+					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+						Randomly selected examples of 64 frame videos of 128×128 resolution on UCF-101. 
+					</table><br>
+
+					<table width="800">
+						<video width="400" height="400" controls controlsList="nodownload">
+						  <source src="resources/ucf_64.mp4" type="video/mp4">
+						</video>
+					</table>
+
+					</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1> Time interpolation </h1></center>
+		<tr>
+			<td width=260px>
+				<center>
+					<table width="800" height="24" border="0" cellspacing="1" cellpadding="3">
+					Interpolated video with 8× larger FPS. 
+					</table><br>
+					<table width="800" height="24" border="0" cellspacing="1" cellpadding="3">
+						<td width="400" valign="middle" halign="middle" align="center">
+							Sky
+						</td>
+						<td width="400" valign="middle" halign="middle" align="center">
+							Tai-Chi-HD
+						</td>
+					</table>
+					<br>
+
+					<table width="800">
+					<video width="400" height="200" controls controlsList="nodownload">
+					  <source src="resources/webpage_interpolation.mp4" type="video/mp4">
+					</video>					
+					<video width="400" height="200" controls controlsList="nodownload">
+					  <source src="resources/taichi_3_webpage_interpolation.mp4" type="video/mp4">
+					</video>					
+					</table>
+
+					<table width="800">
+					<video width="400" height="200" controls controlsList="nodownload">
+					  <source src="resources/sky_20_webpage_interpolation.mp4" type="video/mp4">
+					</video>					
+					<video width="400" height="200" controls controlsList="nodownload">
+					  <source src="resources/taichi_61_webpage_interpolation.mp4" type="video/mp4">
+					</video>					
+					</table>
+
+					<table width="800">
+					<video width="400" height="200" controls controlsList="nodownload">
+					  <source src="resources/sky_54_webpage_interpolation.mp4" type="video/mp4">
+					</video>					
+					<video width="400" height="200" controls controlsList="nodownload">
+					  <source src="resources/taichi_96_webpage_interpolation.mp4" type="video/mp4">
+					</video>					
+					</table>
+
+					<table width="800" height="24" border="0" cellspacing="1" cellpadding="3">
+						<td width="200" valign="middle" halign="middle" align="center">
+							8 FPS
+						</td>
+						<td width="200" valign="middle" halign="middle" align="center">
+							64 FPS
+						</td>
+						<td width="200" valign="middle" halign="middle" align="center">
+							8 FPS
+						</td>
+						<td width="200" valign="middle" halign="middle" align="center">
+							64 FPS
+						</td>
+					</table>			
+			</center>
+			</td>
+		</tr>
+	</table>
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1> Time extrapolation </h1></center>
+		<tr>
+			<td width=260px>
+				<center>
+					<table width="800" height="24" border="0" cellspacing="1" cellpadding="3">
+					Extrapolated videos (4× longer): the red box denotes extrapolated frames (Figure 4, Table 2).
+					</table><br>
+					<table width="800">
+					<video width="400" height="200" controls controlsList="nodownload">
+					  <source src="resources/webpage_extrapolation.mp4" type="video/mp4">
+					</video>
+					<video width="400" height="200" controls controlsList="nodownload">
+					  <source src="resources/sky_25_webpage_extrapolation.mp4" type="video/mp4">
+					</video>
+					</table>
+
+					<table width="800">
+					<video width="400" height="200" controls controlsList="nodownload">
+					  <source src="resources/sky_9_webpage_extrapolation.mp4" type="video/mp4">
+					</video>
+					<video width="400" height="200" controls controlsList="nodownload">
+					  <source src="resources/sky_86_webpage_extrapolation.mp4" type="video/mp4">
+					</video>
+					</table>
+
+					<table width="800" height="24" border="0" cellspacing="1" cellpadding="2">
+						<td width="200" valign="middle" halign="middle" align="center">
+							MoCoGAN-HD
+						</td>
+						<td width="200" valign="middle" halign="middle" align="center">
+							DIGAN (ours)
+						</td>
+						<td width="200" valign="middle" halign="middle" align="center">
+							MoCoGAN-HD
+						</td>
+						<td width="200" valign="middle" halign="middle" align="center">
+							DIGAN (ours)
+						</td>
+
+					</table>			
+			</center>
+			</td>
+		</tr>
+	</table>
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1> Diverse motion sampling </h1></center>
+		<tr>
+		<center>
+			<td width=260px>
+				<center>
+					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					Videos sampled from two different random motion vectors.
+					</table><br>
+
+
+					<table width="1152" height="24" border="0" cellspacing="1" cellpadding="3">
+						<td width="384" valign="middle" halign="middle" align="center">
+							Sky
+						</td>
+						<td width="384" valign="middle" halign="middle" align="center">
+							Kinetics
+						</td>
+						<td width="384" valign="middle" halign="middle" align="center">
+							UCF-101 
+						</td>
+					</table>
+					<br>
+
+					<table width="1152">
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse_motion_sky.mp4" type="video/mp4">
+					</video>
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse/kinetics/motion_diverse_2_80.mp4" type="video/mp4">
+					</video>
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse/ucf/motion_diverse_0_53.mp4" type="video/mp4">
+					</video>
+					</table>
+
+					<table width="1152">
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse/sky/motion_diverse_10_53.mp4" type="video/mp4">
+					</video>
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse/kinetics/motion_diverse_3_45.mp4" type="video/mp4">
+					</video>
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse/ucf/motion_diverse_17_0.mp4" type="video/mp4">
+					</video>
+					</table>
+
+					<table width="1152">
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse/sky/motion_diverse_1_70.mp4" type="video/mp4">
+					</video>
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse/kinetics/motion_diverse_3_61.mp4" type="video/mp4">
+					</video>
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse/ucf/motion_diverse_4_3.mp4" type="video/mp4">
+					</video>
+					</table>
+
+					<table width="1152">
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse/sky/motion_diverse_5_33.mp4" type="video/mp4">
+					</video>
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse/kinetics/motion_diverse_4_99.mp4" type="video/mp4">
+					</video>
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse/ucf/motion_diverse_8_74.mp4" type="video/mp4">
+					</video>
+					</table>
+
+					<table width="1152">
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse/sky/motion_diverse_8_51.mp4" type="video/mp4">
+					</video>
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse/kinetics/motion_diverse_5_4.mp4" type="video/mp4">
+					</video>
+					<video width="384" height="128" controls controlsList="nodownload">
+					  <source src="resources/diverse/ucf/motion_diverse_9_56.mp4" type="video/mp4">
+					</video>
+					</table>
+
+					<table width="1152" height="24" border="0" cellspacing="1" cellpadding="9">
+						<td width="128" valign="middle" halign="middle" align="center">
+							Video 1
+						</td>
+						<td width="128" valign="middle" halign="middle" align="center">
+							Video 2
+						</td>
+						<td width="128" valign="middle" halign="middle" align="center">
+							Difference 
+						</td>
+						<td width="128" valign="middle" halign="middle" align="center">
+							Video 1
+						</td>
+						<td width="128" valign="middle" halign="middle" align="center">
+							Video 2
+						</td>
+						<td width="128" valign="middle" halign="middle" align="center">
+							Difference 
+						</td>
+						<td width="128" valign="middle" halign="middle" align="center">
+							Video 1
+						</td>
+						<td width="128" valign="middle" halign="middle" align="center">
+							Video 2
+						</td>
+						<td width="128" valign="middle" halign="middle" align="center">
+							Difference 
+						</td>
+					</table>			
+	
+			</center>
+			</td>
+		</center>
+		</tr>
+	</table>
+	<hr>
+
+	<center>
+	<table align=center width=850px>
+		<center><h1> Space interpolation </h1></center>
+		<tr>
+			<td width=260px>
+				<center>
+					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					Upsampled videos from 128×128 to 512×512 resolution (4× larger) by various methods.
+					</table><br>
+					<center>
+					<video width="1200" height="240" controls controlsList="nodownload">
+					  <source src="resources/superresolution.mp4" type="video/mp4">
+					</video>
+					<table width="1200" height="24" border="0" cellspacing="1" cellpadding="5">
+						<td width="240" valign="middle" halign="middle" align="center">
+							Original (128×128)
+						</td>
+						<td width="240" valign="middle" halign="middle" align="center">
+							Nearest
+						</td>
+						<td width="240" valign="middle" halign="middle" align="center">
+							Bilinear
+						</td>
+						<td width="240" valign="middle" halign="middle" align="center">
+							Bicubic
+						</td>
+						<td width="240" valign="middle" halign="middle" align="center">
+							DIGAN (ours)
+						</td>
+					</table>
+					</center>
+					<br>
+					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+						Upsampled videos from 128×128 to 1024×1024 resolution (8× larger) by our method. 
+					</table>
+					<br>
+
+					<table width="512">
+						<video width="512" height="512" controls controlsList="nodownload">
+						  <source src="resources/1024/sky_77_0.mp4" type="video/mp4">
+						</video>
+					</table> 
+					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+						Sky
+					</table>
+					<br>
+
+					<table width="512">
+						<video width="512" height="512" controls controlsList="nodownload">
+						  <source src="resources/1024/taichi_18_0.mp4" type="video/mp4">
+						</video>
+					</table>
+					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+						Tai-Chi-HD
+					</table>
+				</center>
+			</td>
+		</tr>
+	</table>
+	</center>
+	<hr>
+
+
+	<center>
+		<table align=center width=850px>
+			<center><h1> Space extrapolation </h1></center>
+			<tr>
+				<td width=260px>
+					<center>
+					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+						Zoomed out videos (1.5×): the red box denotes extrapolated pixels (Figure 8). 
+					</table><br>
+					<table width="720">
+						<video width="240" height="240" controls controlsList="nodownload">
+						  <source src="resources/sky_zoom.mp4" type="video/mp4">
+						</video>					
+						<video width="240" height="240" controls controlsList="nodownload">
+						  <source src="resources/ucf_zoom.mp4" type="video/mp4">
+						</video>					
+						<video width="240" height="240" controls controlsList="nodownload">
+						  <source src="resources/kinetics_zoom.mp4" type="video/mp4">
+						</video>					
+					</table>
+					<table width="720" height="24" border="0" cellspacing="1" cellpadding="5">
+						<td width="240" valign="middle" halign="middle" align="center">
+							Sky Time-lapse
+						</td>
+						<td width="240" valign="middle" halign="middle" align="center">
+							UCF-101
+						</td>
+						<td width="240" valign="middle" halign="middle" align="center">
+							Kinetics-food	
+						</td>
+					</table>									
+				</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+	<hr>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+					<center><h1>Acknowledgements</h1></center>
+					<div style="text-align: justify">
+					SY thanks Jaeho Lee, Younggyo Seo, Minkyu Kim, Soojung Yang, Seokhyun Moon, and Jin-Hwa Kim for their helpful feedbacks on the early version of the manuscript. SY also acknowledges Ivan Skorokhodov for providing the implementation of INR-GAN. This work was partly experimented on the NAVER Smart Machine Learning (NSML) platform. This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>. 
+					</div>
+			</td>
+		</tr>
+	</table>
+	<hr>
+
+	<table align=center width=1200px>
+		<tr>
+			<td width=1150px>
+			<center><h1>Bibtex</h1></center>
+				<table width="1050" height="24" border="0" cellspacing="1" cellpadding="1" align=center>				
+				<tr>
+				<td  width="1050" style="background-color: #EEEEEE;">
+				<div style="font-size:14px;">
+				<tt>
+				<left>
+				@inproceedings{yu2022digan,<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title={Generating Videos with Dynamics-aware Implicit Generative Adversarial Networks},<br>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author={Yu, Sihyun and Tack, Jihoon and Mo, Sangwoo and Kim, Hyunsu and Kim, Junho and Ha, Jung-Woo and Shin, Jinwoo},<br>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;booktitle={The Tenth International Conference on Learning Representations},<br>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year={2022},<br>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url={https://openreview.net/forum?id=Czsdv-S4-w9}<br>
+			    }<br><br>
+				@inproceedings{skorokhodov2021adversarial,<br>
+				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title={Adversarial generation of continuous images},<br>
+				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author={Skorokhodov, Ivan and Ignatyev, Savva and Elhoseiny, Mohamed},<br>
+				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},<br>
+				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pages={10753--10764},<br>
+				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year={2021}<br>
+				}
+				</left>
+				<br>
+				</tt>
+				</div>
+				<td>
+			</tr>
+			</table>
+			</td>
+		</tr>
+	</table>
+	<br>
+</body>
+</html>
+
