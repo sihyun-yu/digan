@@ -9,6 +9,8 @@ Official PyTorch implementation of **["Generating Videos with Dynamics-aware Imp
 [Jung-Woo Ha](https://aidljwha.wordpress.com/), 
 [Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html).
 
+[paper](https://openreview.net/forum?id=Czsdv-S4-w9) | [project page](https://sihyun-yu.github.io/digan/)
+
 **TL;DR**: We make video generation scalable leveraging implicit neural representations.
 
 <p align="center">
