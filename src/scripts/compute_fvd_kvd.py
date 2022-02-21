@@ -13,7 +13,7 @@ import legacy
 from fvd.fvd import get_fvd_logits, frechet_distance
 from fvd.download import load_i3d_pretrained
 from training.networks import Generator
-from training.dataset import OurImageFolderDataset, UCF101Wrapper
+from training.dataset import ImageFolderDataset, UCF101Wrapper
 
 
 def polynomial_mmd(X, Y):
@@ -68,7 +68,7 @@ def main(
     if 'UCF' in network_pkl or 'ucf' in network_pkl:
         dataset = UCF101Wrapper(data_path, False, 128, data_path, xflip=False, return_vid=True)
     else:
-        dataset = OurImageFolderDataset(data_path, 128, 16, train=False, return_vid=True, xflip=False)
+        dataset = ImageFolderDataset(data_path, 128, 16, train=False, return_vid=True, xflip=False)
 
     #################### Load I3D ########################################
     i3d = load_i3d_pretrained(device)
