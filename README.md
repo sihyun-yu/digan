@@ -1,17 +1,17 @@
 ## DIGAN (ICLR 2022)
 
 Official PyTorch implementation of **["Generating Videos with Dynamics-aware Implicit Generative Adversarial Networks"](https://openreview.net/forum?id=Czsdv-S4-w9)** by 
-[Sihyun Yu*](https://sihyun-yu.github.io/), 
-[Jihoon Tack*](https://jihoontack.github.io/), 
-[Sangwoo Mo*](https://sites.google.com/view/sangwoomo/), 
-[Hyunsu Kim](https://www.linkedin.com/in/blandocs/), 
-[Junho Kim](https://github.com/taki0112), 
-[Jung-Woo Ha](https://aidljwha.wordpress.com/), 
-[Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html).
+[Sihyun Yu*](https://sihyun-yu.github.io/)<sup>,1</sup>, 
+[Jihoon Tack*](https://jihoontack.github.io/)<sup>,1</sup>, 
+[Sangwoo Mo*](https://sites.google.com/view/sangwoomo/)<sup>,1</sup>, 
+[Hyunsu Kim](https://www.linkedin.com/in/blandocs/)<sup>2</sup>, 
+[Junho Kim](https://github.com/taki0112)<sup>2</sup>, 
+[Jung-Woo Ha](https://aidljwha.wordpress.com/)<sup>2</sup>, 
+[Jinwoo Shin](https://alinlab.kaist.ac.kr/shin.html)<sup>1</sup>.  
+<sup>1</sup>KAIST, <sup>2</sup>NAVER AI Lab (KAIST-NAVER Hypercreative AI Center)
 
+**TL;DR**: We make video generation scalable leveraging implicit neural representations.  
 [paper](https://openreview.net/forum?id=Czsdv-S4-w9) | [project page](https://sihyun-yu.github.io/digan/)
-
-**TL;DR**: We make video generation scalable leveraging implicit neural representations.
 
 <p align="center">
     <img src=figures/method_overview.png width="900"> 
