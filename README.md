@@ -94,7 +94,8 @@ python src/scripts/generate_videos.py --network_pkl <MODEL_PATH> --outdir <OUTPU
 
 ### 6. Results
 Generated video results of DIGAN on TaiChi (top) and Sky (bottom) datasets.\
-More generated video results are available at the following [site](https://sihyun-yu.github.io/digan/).
+More generated video results are available at the following [site](https://sihyun-yu.github.io/digan/).\
+One can download the pretrained checkpoints from the following [link](https://drive.google.com/drive/folders/1zrzyBMrqy7V_o4gGGLo_m2aErfshaFjz).
 
 <p align="center">
     <img src=figures/taichi.gif width="500" height="500" />
