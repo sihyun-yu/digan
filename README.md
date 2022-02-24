@@ -108,7 +108,7 @@ One can download the pretrained checkpoints from the following [link](https://dr
 ### Citation
 ```
 @inproceedings{
-    yu2022generating,
+    yu2022digan,
     title={Generating Videos with Dynamics-aware Implicit Generative Adversarial Networks},
     author={Yu, Sihyun and Tack, Jihoon and Mo, Sangwoo and Kim, Hyunsu and Kim, Junho and Ha, Jung-Woo and Shin, Jinwoo},
     booktitle={International Conference on Learning Representations},
