@@ -574,10 +574,15 @@ class ImageFolderDataset(Dataset):
         self.to_tensor = transforms.ToTensor()
         random.shuffle(self.shuffle_indices)
 
+        if 'kinetics' in self._path or 'KINETICS' in self._path or 'SKY' in self._path:      
+            if train:
+                dir_path = os.path.join(self._path, 'train')
+            else:
+                dir_path = os.path.join(self._path, 'val')
+        
         if os.path.isdir(self._path):
             self._type = 'dir'
-            self._all_fnames = {os.path.relpath(os.path.join(root, fname), start=self._path) for root, _dirs, files in os.walk(self._path) for fname in files}
-        elif self._file_ext(self._path) == '.zip':
+            self._all_fnames = {os.path.relpath(os.path.join(root, fname), start=dir_path) for root, _dirs, files in os.walk(dir_path) for fname in files}        elif self._file_ext(self._path) == '.zip':
             self._type = 'zip'
             self._all_fnames = set(self._get_zipfile().namelist())
         else:
@@ -596,9 +601,14 @@ class ImageFolderDataset(Dataset):
         super().__init__(name=name, raw_shape=self._raw_shape, **super_kwargs)
 
     @staticmethod
-    def _file_ext(fname):
+    def _file_ext(self, fname):
         return os.path.splitext(fname)[1].lower()
 
+    def _get_zipfile(self):
+         assert self._type == 'zip'
+         if self._zipfile is None:
+             self._zipfile = zipfile.ZipFile(self._path)
+         return self._zipfile
 
     def _open_file(self, fname):
         if self._type == 'dir':
