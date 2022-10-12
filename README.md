@@ -11,7 +11,7 @@ Official PyTorch implementation of **["Generating Videos with Dynamics-aware Imp
 <sup>1</sup>KAIST, <sup>2</sup>NAVER AI Lab (KAIST-NAVER Hypercreative AI Center)
 
 **TL;DR**: We make video generation scalable leveraging implicit neural representations.  
-[paper](https://openreview.net/forum?id=Czsdv-S4-w9) | [project page](https://sihyun-yu.github.io/digan/)
+[paper](https://openreview.net/forum?id=Czsdv-S4-w9) | [project page](https://sihyun.me/digan/)
 
 <p align="center">
     <img src=figures/method_overview.png width="900"> 
