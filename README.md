@@ -79,7 +79,8 @@ To train the model, navigate to the project directory and run:
 python src/infra/launch.py hydra.run.dir=. +experiment_name=<EXP_NAME> +dataset.name=<DATASET>
 ```
 You may change training options via modifying `configs/main.yml` and `configs/digan.yml`.\
-Also the dataset list is as follows, `<DATASET>`: {`UCF-101`,`sky`,`taichi`,`kinetics`}
+Also the dataset list is as follows, `<DATASET>`: {`UCF-101`,`sky`,`taichi`,`kinetics`}.
+The default data path is `/data`, where you can change it via modifying `configs/main.yml`.
 
 ### 4. Evaluation (FVD and KVD)
 ```
