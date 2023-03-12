@@ -291,7 +291,7 @@
 		<tr>
 			<td width=100%>
 				<center>
-					<table width="850" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width="850" border="0" cellspacing="1" cellpadding="3">
 					<td>
 					<div style="text-align: justify">
 					In the deep learning era, long video generation of high-quality still remains challenging due to the spatio-temporal complexity and continuity of videos. Existing prior works have attempted to model video distribution by representing videos as 3D grids of RGB values, which impedes the scale of generated videos and neglects continuous dynamics. In this paper, we found that the recent emerging paradigm of implicit neural representations (INRs) that encodes a continuous signal into a parameterized neural network effectively mitigates the issue. By utilizing INRs of video, we propose dynamics-aware implicit generative adversarial network (DIGAN), a novel generative adversarial network for video generation. Specifically, we introduce (a) an INR-based video generator that improves the motion dynamics by manipulating the space and time coordinates differently and (b) a motion discriminator that efficiently identifies the unnatural motions without observing the entire long frame sequences. We demonstrate the superiority of DIGAN under various datasets, along with multiple intriguing properties, e.g., long video synthesis, video extrapolation, and non-autoregressive video generation. For example, DIGAN improves the previous state-of-the-art FVD score on UCF-101 by 30.7% and can be trained on 128 frame videos of 128x128 resolution, 80 frames longer than the 48 frames of the previous state-of-the-art method.
@@ -311,40 +311,40 @@
 		<tr>
 			<td width=256px>
 				<center>
-					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 					Randomly selected examples of generated videos (unconditional) on diverse datasets.
 					</table><br>
 
-					<table width="800">
-						<video width="400" height="400" controls controlsList="nodownload">
+					<table width=100%>
+						<video width=50% controls controlsList="nodownload">
 						  <source src="resources/main/ucf_main.mp4" type="video/mp4">
 						</video>
-						<video width="400" height="400" controls controlsList="nodownload">
+						<video width=50% controls controlsList="nodownload">
 						  <source src="resources/main/sky_main.mp4" type="video/mp4">
 						</video>
 					</table>
-					<table width="800" height="24" border="0" cellspacing="1" cellpadding="2">
-						<td width="400" valign="middle" halign="middle" align="center">
+					<table width=100% border="0" cellspacing="1" cellpadding="2">
+						<td width=50% valign="middle" halign="middle" align="center">
 							UCF-101
 						</td>
-						<td width="400" valign="middle" halign="middle" align="center">
+						<td width=50% valign="middle" halign="middle" align="center">
 							Sky Time-lapse
 						</td>
 					</table>			
 					<br>
-					<table width="800">
-						<video width="400" height="400" controls controlsList="nodownload">
+					<table width=100%>
+						<video width=50% controls controlsList="nodownload">
 						  <source src="resources/main/taichi_main.mp4" type="video/mp4">
 						</video>
-						<video width="400" height="400" controls controlsList="nodownload">
+						<video width=50% controls controlsList="nodownload">
 						  <source src="resources/main/kinetics_main.mp4" type="video/mp4">
 						</video>
 					</table>
-					<table width="800" height="24" border="0" cellspacing="1" cellpadding="2">
-						<td width="400" valign="middle" halign="middle" align="center">
+					<table width=100% border="0" cellspacing="1" cellpadding="2">
+						<td width=50% valign="middle" halign="middle" align="center">
 							Tai-Chi-HD
 						</td>
-						<td width="400" valign="middle" halign="middle" align="center">
+						<td width=50% valign="middle" halign="middle" align="center">
 							Kinetics-food
 						</td>
 					</table>								
@@ -360,63 +360,63 @@
 			<tr>
 				<td width=260px>
 					<center>
-					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 						128 frame videos of 128×128 resolution on Tai-Chi-HD. We set 30 FPS, which is fully identical to the real videos. 
 					</table><br>
-						<table width="480">
-							<video width="240" height="240" controls controlsList="nodownload">
+						<table width=70%>
+							<video width=50% controls controlsList="nodownload">
 							  <source src="resources/long/taichi128_example1_30fps.mp4" type="video/mp4">
 							</video>					
-							<video width="240" height="240" controls controlsList="nodownload">
+							<video width=50%  controls controlsList="nodownload">
 							  <source src="resources/long/taichi128_example2_30fps.mp4" type="video/mp4">
 							</video>
 						</table>
-						<table width="480" height="24" border="0" cellspacing="1" cellpadding="5">
-						<td width="240" valign="middle" halign="middle" align="center">
+						<table width=70% border="0" cellspacing="1" cellpadding="5">
+						<td width=50% valign="middle" halign="middle" align="center">
 							Example 1
 						</td>
-						<td width="240" valign="middle" halign="middle" align="center">
+						<td width=50% valign="middle" halign="middle" align="center">
 							Example 2
 						</td>
 					</table><br>
 
-					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 						256 frame videos of 128×128 resolution on Tai-Chi-HD. We set 30 FPS, which is fully identical to the real videos. 
 					</table><br>
-						<table width="480">
-							<video width="240" height="240" controls controlsList="nodownload">
+						<table width=70%>
+							<video width=50% controls controlsList="nodownload">
 							  <source src="resources/long/taichi256_76_42.mp4" type="video/mp4">
 							</video>					
-							<video width="240" height="240" controls controlsList="nodownload">
+							<video width=50% controls controlsList="nodownload">
 							  <source src="resources/long/taichi256_79_42.mp4" type="video/mp4">
 							</video>
 						</table>
-						<table width="480" height="24" border="0" cellspacing="1" cellpadding="5">
-						<td width="240" valign="middle" halign="middle" align="center">
+						<table width=70% border="0" cellspacing="1" cellpadding="5">
+						<td width=50% valign="middle" halign="middle" align="center">
 							Example 1
 						</td>
-						<td width="240" valign="middle" halign="middle" align="center">
+						<td width=50% valign="middle" halign="middle" align="center">
 							Example 2
 						</td>
 					</table><br>
 
-					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 						Randomly selected examples of 256 frame videos of 128×128 resolution on Tai-Chi-HD. 
 					</table><br>
 
-					<table width="800">
-						<video width="400" height="400" controls controlsList="nodownload">
+					<table width=100%>
+						<video width=50% controls controlsList="nodownload">
 						  <source src="resources/long/taichi_256_random.mp4" type="video/mp4">
 						</video>
 					</table><br>
 
 						
-					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 						Randomly selected examples of 64 frame videos of 128×128 resolution on UCF-101. 
 					</table><br>
 
-					<table width="800">
-						<video width="400" height="400" controls controlsList="nodownload">
+					<table width=100%>
+						<video width=50% controls controlsList="nodownload">
 						  <source src="resources/long/ucf_64.mp4" type="video/mp4">
 						</video>
 					</table>
@@ -433,57 +433,57 @@
 		<tr>
 			<td width=260px>
 				<center>
-					<table width="800" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 					Interpolated video with 8× larger FPS. 
 					</table><br>
-					<table width="800" height="24" border="0" cellspacing="1" cellpadding="3">
-						<td width="400" valign="middle" halign="middle" align="center">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
+						<td width=50% valign="middle" halign="middle" align="center">
 							Sky
 						</td>
-						<td width="400" valign="middle" halign="middle" align="center">
+						<td width=50% valign="middle" halign="middle" align="center">
 							Tai-Chi-HD
 						</td>
 					</table>
 					<br>
 
-					<table width="800">
-					<video width="400" height="200" controls controlsList="nodownload">
+					<table width=100%>
+					<video width=50% controls controlsList="nodownload">
 					  <source src="resources/time_interpolation/sky_1_webpage_interpolation.mp4" type="video/mp4">
 					</video>					
-					<video width="400" height="200" controls controlsList="nodownload">
+					<video width=50% controls controlsList="nodownload">
 					  <source src="resources/time_interpolation/taichi_3_webpage_interpolation.mp4" type="video/mp4">
 					</video>					
 					</table>
 
-					<table width="800">
-					<video width="400" height="200" controls controlsList="nodownload">
+					<table width=100%>
+					<video width=50% controls controlsList="nodownload">
 					  <source src="resources/time_interpolation/sky_20_webpage_interpolation.mp4" type="video/mp4">
 					</video>					
-					<video width="400" height="200" controls controlsList="nodownload">
+					<video width=50% controls controlsList="nodownload">
 					  <source src="resources/time_interpolation/taichi_61_webpage_interpolation.mp4" type="video/mp4">
 					</video>					
 					</table>
 
-					<table width="800">
-					<video width="400" height="200" controls controlsList="nodownload">
+					<table width=100%>
+					<video width=50% controls controlsList="nodownload">
 					  <source src="resources/time_interpolation/sky_54_webpage_interpolation.mp4" type="video/mp4">
 					</video>					
-					<video width="400" height="200" controls controlsList="nodownload">
+					<video width=50% controls controlsList="nodownload">
 					  <source src="resources/time_interpolation/taichi_96_webpage_interpolation.mp4" type="video/mp4">
 					</video>					
 					</table>
 
-					<table width="800" height="24" border="0" cellspacing="1" cellpadding="3">
-						<td width="200" valign="middle" halign="middle" align="center">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
+						<td width=25% valign="middle" halign="middle" align="center">
 							8 FPS
 						</td>
-						<td width="200" valign="middle" halign="middle" align="center">
+						<td width=25% valign="middle" halign="middle" align="center">
 							64 FPS
 						</td>
-						<td width="200" valign="middle" halign="middle" align="center">
+						<td width=25% valign="middle" halign="middle" align="center">
 							8 FPS
 						</td>
-						<td width="200" valign="middle" halign="middle" align="center">
+						<td width=25% valign="middle" halign="middle" align="center">
 							64 FPS
 						</td>
 					</table>			
@@ -498,28 +498,28 @@
 		<tr>
 			<td width=260px>
 				<center>
-					<table width="800" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 					Extrapolated videos (4× longer): the red box denotes extrapolated frames (Figure 4, Table 2).
 					</table><br>
-					<table width="800">
-					<video width="400" height="200" controls controlsList="nodownload">
+					<table width=100%>
+					<video width=50% controls controlsList="nodownload">
 					  <source src="resources/time_extrapolation/sky_1_webpage_extrapolation.mp4" type="video/mp4">
 					</video>
-					<video width="400" height="200" controls controlsList="nodownload">
+					<video width=50% controls controlsList="nodownload">
 					  <source src="resources/time_extrapolation/sky_25_webpage_extrapolation.mp4" type="video/mp4">
 					</video>
 					</table>
 
-					<table width="800">
-					<video width="400" height="200" controls controlsList="nodownload">
+					<table width=100%>
+					<video width=50% controls controlsList="nodownload">
 					  <source src="resources/time_extrapolation/sky_9_webpage_extrapolation.mp4" type="video/mp4">
 					</video>
-					<video width="400" height="200" controls controlsList="nodownload">
+					<video width=50% controls controlsList="nodownload">
 					  <source src="resources/time_extrapolation/sky_86_webpage_extrapolation.mp4" type="video/mp4">
 					</video>
 					</table>
 
-					<table width="800" height="24" border="0" cellspacing="1" cellpadding="2">
+					<table width=100% border="0" cellspacing="1" cellpadding="2">
 						<td width="200" valign="middle" halign="middle" align="center">
 							MoCoGAN-HD
 						</td>
@@ -546,110 +546,110 @@
 		<center>
 			<td width=260px>
 				<center>
-					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 					Videos sampled from two different random motion vectors.
 					</table><br>
 
 
-					<table width="1152" height="24" border="0" cellspacing="1" cellpadding="3">
-						<td width="384" valign="middle" halign="middle" align="center">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
+						<td width=33% valign="middle" halign="middle" align="center">
 							Sky
 						</td>
-						<td width="384" valign="middle" halign="middle" align="center">
+						<td width=33% valign="middle" halign="middle" align="center">
 							Kinetics
 						</td>
-						<td width="384" valign="middle" halign="middle" align="center">
+						<td width=33% valign="middle" halign="middle" align="center">
 							UCF-101 
 						</td>
 					</table>
 					<br>
 
-					<table width="1152">
-					<video width="384" height="128" controls controlsList="nodownload">
+					<table width=100%>
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/sky/motion_diverse_1_70.mp4" type="video/mp4">
 					</video>
-					<video width="384" height="128" controls controlsList="nodownload">
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/kinetics/motion_diverse_2_80.mp4" type="video/mp4">
 					</video>
-					<video width="384" height="128" controls controlsList="nodownload">
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/ucf/motion_diverse_0_53.mp4" type="video/mp4">
 					</video>
 					</table>
 
-					<table width="1152">
-					<video width="384" height="128" controls controlsList="nodownload">
+					<table width=100%>
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/sky/motion_diverse_10_53.mp4" type="video/mp4">
 					</video>
-					<video width="384" height="128" controls controlsList="nodownload">
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/kinetics/motion_diverse_3_45.mp4" type="video/mp4">
 					</video>
-					<video width="384" height="128" controls controlsList="nodownload">
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/ucf/motion_diverse_17_0.mp4" type="video/mp4">
 					</video>
 					</table>
 
-					<table width="1152">
-					<video width="384" height="128" controls controlsList="nodownload">
+					<table width=100%>
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/sky/motion_diverse_1_70.mp4" type="video/mp4">
 					</video>
-					<video width="384" height="128" controls controlsList="nodownload">
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/kinetics/motion_diverse_3_61.mp4" type="video/mp4">
 					</video>
-					<video width="384" height="128" controls controlsList="nodownload">
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/ucf/motion_diverse_4_3.mp4" type="video/mp4">
 					</video>
 					</table>
 
-					<table width="1152">
-					<video width="384" height="128" controls controlsList="nodownload">
+					<table width=100%>
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/sky/motion_diverse_5_33.mp4" type="video/mp4">
 					</video>
-					<video width="384" height="128" controls controlsList="nodownload">
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/kinetics/motion_diverse_4_99.mp4" type="video/mp4">
 					</video>
-					<video width="384" height="128" controls controlsList="nodownload">
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/ucf/motion_diverse_8_74.mp4" type="video/mp4">
 					</video>
 					</table>
 
-					<table width="1152">
-					<video width="384" height="128" controls controlsList="nodownload">
+					<table width=100%>
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/sky/motion_diverse_8_51.mp4" type="video/mp4">
 					</video>
-					<video width="384" height="128" controls controlsList="nodownload">
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/kinetics/motion_diverse_5_4.mp4" type="video/mp4">
 					</video>
-					<video width="384" height="128" controls controlsList="nodownload">
+					<video width=33% height="128" controls controlsList="nodownload">
 					  <source src="resources/diverse/ucf/motion_diverse_9_56.mp4" type="video/mp4">
 					</video>
 					</table>
 
-					<table width="1152" height="24" border="0" cellspacing="1" cellpadding="9">
-						<td width="128" valign="middle" halign="middle" align="center">
+					<table width=100% border="0" cellspacing="1" cellpadding="9">
+						<td width=11% valign="middle" halign="middle" align="center">
 							Video 1
 						</td>
-						<td width="128" valign="middle" halign="middle" align="center">
+						<td width=11% valign="middle" halign="middle" align="center">
 							Video 2
 						</td>
-						<td width="128" valign="middle" halign="middle" align="center">
+						<td width=11% valign="middle" halign="middle" align="center">
 							Difference 
 						</td>
-						<td width="128" valign="middle" halign="middle" align="center">
+						<td width=11% valign="middle" halign="middle" align="center">
 							Video 1
 						</td>
-						<td width="128" valign="middle" halign="middle" align="center">
+						<td width=11% valign="middle" halign="middle" align="center">
 							Video 2
 						</td>
-						<td width="128" valign="middle" halign="middle" align="center">
+						<td width=11% valign="middle" halign="middle" align="center">
 							Difference 
 						</td>
-						<td width="128" valign="middle" halign="middle" align="center">
+						<td width=11% valign="middle" halign="middle" align="center">
 							Video 1
 						</td>
-						<td width="128" valign="middle" halign="middle" align="center">
+						<td width=11% valign="middle" halign="middle" align="center">
 							Video 2
 						</td>
-						<td width="128" valign="middle" halign="middle" align="center">
+						<td width=11% valign="middle" halign="middle" align="center">
 							Difference 
 						</td>
 					</table>			
@@ -667,14 +667,14 @@
 		<tr>
 			<td width=260px>
 				<center>
-					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 					Upsampled videos from 128×128 to 512×512 resolution (4× larger) by various methods.
 					</table><br>
 					<center>
 					<video width="1200" height="240" controls controlsList="nodownload">
 					  <source src="resources/superresolution/superresolution.mp4" type="video/mp4">
 					</video>
-					<table width="1200" height="24" border="0" cellspacing="1" cellpadding="5">
+					<table width="1200" border="0" cellspacing="1" cellpadding="5">
 						<td width="240" valign="middle" halign="middle" align="center">
 							Original (128×128)
 						</td>
@@ -693,7 +693,7 @@
 					</table>
 					</center>
 					<br>
-					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 						Upsampled videos from 128×128 to 1024×1024 resolution (8× larger) by our method. 
 					</table>
 					<br>
@@ -703,7 +703,7 @@
 						  <source src="resources/superresolution/sky_77_0.mp4" type="video/mp4">
 						</video>
 					</table> 
-					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 						Sky
 					</table>
 					<br>
@@ -713,7 +713,7 @@
 						  <source src="resources/superresolution/taichi_18_0.mp4" type="video/mp4">
 						</video>
 					</table>
-					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 						Tai-Chi-HD
 					</table>
 				</center>
@@ -727,9 +727,8 @@
 		<table align=center width=100%>
 			<center><h1> Space extrapolation </h1></center>
 			<tr>
-				<td width=260px>
 					<center>
-					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 						Zoomed out videos (1.5×): the red box denotes extrapolated pixels (Figure 8). 
 					</table><br>
 					<table width="720">
@@ -743,7 +742,7 @@
 						  <source src="resources/zoom_out/kinetics_zoom.mp4" type="video/mp4">
 						</video>					
 					</table>
-					<table width="720" height="24" border="0" cellspacing="1" cellpadding="5">
+					<table width="720" border="0" cellspacing="1" cellpadding="5">
 						<td width="240" valign="middle" halign="middle" align="center">
 							Sky Time-lapse
 						</td>
@@ -755,7 +754,6 @@
 						</td>
 					</table>									
 				</center>
-				</td>
 			</tr>
 		</table>
 	</center>
@@ -767,12 +765,12 @@
 			<tr>
 				<td width=260px>
 					<center>
-					<table width="840" height="24" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 						Randomly selected examples of generated videos (class-conditional) on UCF-101.
 					</table><br>
 
-					<table width="800">
-						<video width="400" height="400" controls controlsList="nodownload">
+					<table width=100%>
+						<video width=100% controls controlsList="nodownload">
 						  <source src="resources/class_conditional/ucf_cond.mp4" type="video/mp4">
 						</video>
 					</table>
