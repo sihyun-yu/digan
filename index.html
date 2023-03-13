@@ -223,14 +223,14 @@
 	    <br>
 	</div>	
 	<center>
-		<table align=center width=360px>
+		<table align=center width=70%>
 			<tr>
-				<td align=center width=140px>
+				<td align=center width=25%>
 					<center>
 						<span style="font-size:20px; text-align: center"><sup>1</sup><img style="vertical-align: bottom" src="resources/icons/kaist-icon.png" width="30px" height="30px"> KAIST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 					</center>
 				</td>
-				<td align=center width=140px>
+				<td align=center width=25%>
 					<center>
 						<span style="font-size:20px; text-align: center"><sup>2</sup><img style="vertical-align: bottom" src="resources/icons/naver-icon.png" width="25px" height="25px"> NAVER AI Lab</span>
 					</center>
@@ -240,9 +240,9 @@
 		<div style="line-height:40%;">
 		    <br>
 		</div>	
-		<table align=center width=360px>
+		<table align=center width=70%>
 			<tr>
-				<td align=center width=140px>
+				<td align=center width=25%>
 					<center>
 						<span style="font-size:18px; text-align: center"><sup>*</sup>Denotes equal contribution</span>
 					</center>
@@ -254,19 +254,19 @@
 	    <br>
 	</div>	
 	<center>
-		<table align=center width=390px>
+		<table align=center width=70%>
 			<tr>
-				<td align=center width=100px>
+				<td align=center width=33%>
 					<center>
 						<span style="font-size:20px">[<a href="https://openreview.net/forum?id=Czsdv-S4-w9">Paper</a>]</span>
 					</center>
 				</td>
-				<td align=center width=100px>
+				<td align=center width=33%>
 					<center>
 						<span style="font-size:20px">[<a href="https://github.com/sihyun-yu/digan">Code</a>]</span>
 					</center>
 				</td>			
-				<td align=center width=100px>
+				<td align=center width=33%>
 					<center>
 						<span style="font-size:20px">[<a href="resources/slides/digan_iclr2022_short.pdf">Slides</a>]</span>
 					</center>
@@ -291,7 +291,7 @@
 		<tr>
 			<td width=100%>
 				<center>
-					<table width="850" border="0" cellspacing="1" cellpadding="3">
+					<table width=100% border="0" cellspacing="1" cellpadding="3">
 					<td>
 					<div style="text-align: justify">
 					In the deep learning era, long video generation of high-quality still remains challenging due to the spatio-temporal complexity and continuity of videos. Existing prior works have attempted to model video distribution by representing videos as 3D grids of RGB values, which impedes the scale of generated videos and neglects continuous dynamics. In this paper, we found that the recent emerging paradigm of implicit neural representations (INRs) that encodes a continuous signal into a parameterized neural network effectively mitigates the issue. By utilizing INRs of video, we propose dynamics-aware implicit generative adversarial network (DIGAN), a novel generative adversarial network for video generation. Specifically, we introduce (a) an INR-based video generator that improves the motion dynamics by manipulating the space and time coordinates differently and (b) a motion discriminator that efficiently identifies the unnatural motions without observing the entire long frame sequences. We demonstrate the superiority of DIGAN under various datasets, along with multiple intriguing properties, e.g., long video synthesis, video extrapolation, and non-autoregressive video generation. For example, DIGAN improves the previous state-of-the-art FVD score on UCF-101 by 30.7% and can be trained on 128 frame videos of 128x128 resolution, 80 frames longer than the 48 frames of the previous state-of-the-art method.
@@ -309,7 +309,7 @@
 	<table align=center width=100%>
 		<center><h1>Main results </h1></center>
 		<tr>
-			<td width=256px>
+			<td width=100%>
 				<center>
 					<table width=100% border="0" cellspacing="1" cellpadding="3">
 					Randomly selected examples of generated videos (unconditional) on diverse datasets.
@@ -358,6 +358,7 @@
 		<table align=center width=100%>
 			<center><h1> Long video generation</h1></center>
 			<tr>
+				<td>
 					<center>
 					<table width=100% border="0" cellspacing="1" cellpadding="3">
 						128 frame videos of 128×128 resolution on Tai-Chi-HD. We set 30 FPS, which is fully identical to the real videos. 
@@ -421,6 +422,7 @@
 
 					</center>
 				</td>
+			</td>
 			</tr>
 		</table>
 	</center>
@@ -429,7 +431,7 @@
 	<table align=center width=100%>
 		<center><h1> Time interpolation </h1></center>
 		<tr>
-			<td width=260px>
+			<td>
 				<center>
 					<table width=100% border="0" cellspacing="1" cellpadding="3">
 					Interpolated video with 8× larger FPS. 
@@ -486,7 +488,7 @@
 						</td>
 					</table>			
 			</center>
-			</td>
+		</td>
 		</tr>
 	</table>
 	<hr>
@@ -494,7 +496,7 @@
 	<table align=center width=100%>
 		<center><h1> Time extrapolation </h1></center>
 		<tr>
-			<td width=260px>
+			<td>
 				<center>
 					<table width=100% border="0" cellspacing="1" cellpadding="3">
 					Extrapolated videos (4× longer): the red box denotes extrapolated frames (Figure 4, Table 2).
@@ -533,7 +535,7 @@
 
 					</table>			
 			</center>
-			</td>
+		</td>
 		</tr>
 	</table>
 	<hr>
@@ -542,7 +544,6 @@
 		<center><h1> Diverse motion sampling </h1></center>
 		<tr>
 		<center>
-			<td width=260px>
 				<center>
 					<table width=100% border="0" cellspacing="1" cellpadding="3">
 					Videos sampled from two different random motion vectors.
@@ -653,9 +654,7 @@
 					</table>			
 	
 			</center>
-			</td>
 		</center>
-		</tr>
 	</table>
 	<hr>
 
